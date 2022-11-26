@@ -11,8 +11,8 @@ const handleClick = () => {
 
     return (
       <div className="Home">
-        <h1>Voce estar na página inicial</h1>
-        <Button onClick={handleClick}>cadastra-se</Button>
+        <h1>Você está na página inicial</h1>
+        <Button onClick={handleClick}>Cadastra-se</Button>
       </div>
   )
 }
