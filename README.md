@@ -2,7 +2,7 @@
 
 Repositório do Projeto Final da disciplina Programação Orientada a Objetos do 3º semestre do curso Ciências da computação do IFCE Maracanaú.
 
-## Padrões de nome/título
+## Convenção de branch e commit
 
 - tipo
   - feature
@@ -12,8 +12,8 @@ Repositório do Projeto Final da disciplina Programação Orientada a Objetos do
 
 ### Branch
 
-- {tipo}/{id da issue}
+- {tipo}/{id da issue}-{nome da branch}
 
 ### Commit
 
-- {tipo}({id da issue}):{mensagem do commit}
+- {tipo}({id da issue}): {mensagem do commit}
