@@ -2,18 +2,18 @@
 
 Repositório do Projeto Final da disciplina Programação Orientada a Objetos do 3º semestre do curso Ciências da computação do IFCE Maracanaú.
 
-## Padrão de branch
+## Padrões de nome/título
 
-- feature/{id da issue}
-- bugfix/{id da issue}
-- architectural/{id da issue}
-- Padrão de commit
-- feature({id}):titulo
-- Descrição da atividade
+- tipo
+  - feature
+  - bugfix
+  - arquitectural
+  - documentation
 
-**Podendo ser:**
+### Branch
 
-- Feature
-- Bugfix
-- Arquitectural
-- Documentation
+- {tipo}/{id da issue}
+
+### Commit
+
+- {tipo}({id da issue}):{mensagem do commit}
