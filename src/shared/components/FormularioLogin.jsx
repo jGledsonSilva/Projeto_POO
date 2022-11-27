@@ -1,9 +1,17 @@
-import FormularioLogin from "../../shared/components/FormularioLogin"
+import { Button } from "@mui/material"
+import { useNavigate } from "react-router-dom";
 
-export const Login = () => {
-    return (
-    <div className="Login">
-      <h1>Você está na página de login</h1>
+
+export const FormularioLogin = () => {
+
+  const history = useNavigate();
+
+  const handleClick = () => {
+    history('/entrar')
+  }
+
+  return (
+
       <div className="FormularioLogin">
         <h1>Login</h1>
         <Button onClick={handleClick}>Entrar com o Google</Button>
@@ -31,8 +39,7 @@ export const Login = () => {
           Cadastre-se
         </Link>
       </div>
-    </div>
   )
 }
 
-export default Login
+export default FormularioLogin
