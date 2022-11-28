@@ -6,7 +6,7 @@ export const AppRoutes = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/pagina-inicial" element={<Home />} />
-                <Route path="/entrar" element={<Login />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/cadastrar" element={<Cadastro />} />
                 <Route path="*" element={<Navigate to="/pagina-inicial"/>} />
             </Routes>
