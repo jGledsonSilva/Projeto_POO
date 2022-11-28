@@ -1,7 +1,7 @@
-import FormularioLogin from "../../shared/components/FormularioLogin"
+import { TextField, Button, Link } from '@mui/material';
 
 export const Login = () => {
-    return (
+  return (
     <div className="Login">
       <h1>Você está na página de login</h1>
       <div className="FormularioLogin">
@@ -15,8 +15,8 @@ export const Login = () => {
         />
         <TextField
           id="outlined-name"
-          label="Email"
-          value={email}
+          label="Senha"
+          value={senha}
           onChange={handleChange}
         />
         <Button onClick={handleClick}>Entrar</Button>
