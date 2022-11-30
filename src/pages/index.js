@@ -1,3 +1,3 @@
-export * from './home/Home'
-export * from './login/Login'
-export * from './cadastro/Cadastro'
+export * from './Home/Home'
+export * from './Login/Login'
+export * from './Cadastro/Cadastro'
