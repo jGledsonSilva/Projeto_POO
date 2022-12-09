@@ -1,5 +1,5 @@
 import { Testtheme } from '../../shared/themes';
-import { ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GoogleIcon from '@mui/icons-material/Google';
 import {
     Button,
@@ -14,7 +14,7 @@ import {
     CssBaseline,
     Link,
 } from '@mui/material';
-
+export const T = createTheme()
 export const Cadastro = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
