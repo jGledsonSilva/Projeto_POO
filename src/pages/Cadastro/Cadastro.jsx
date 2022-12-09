@@ -1,4 +1,6 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Testtheme } from '../../shared/themes';
+import { ThemeProvider } from '@mui/material/styles';
+import GoogleIcon from '@mui/icons-material/Google';
 import {
     Button,
     Checkbox,
@@ -9,11 +11,9 @@ import {
     Typography,
     Container,
     Paper,
+    CssBaseline,
+    Link,
 } from '@mui/material';
-
-const theme = createTheme({
-
-});
 
 export const Cadastro = () => {
     const handleSubmit = (event) => {
@@ -26,21 +26,30 @@ export const Cadastro = () => {
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <Paper elevation={9} sx={{ my: { xs: 2 }, p: { xs: 2 } }}>
-                <Box>
-                    <Typography component="h1" variant="h5" mt={8}>
+        <ThemeProvider theme={Testtheme}>
+            <CssBaseline />
+            <Container component="main" maxWidth="sm" sx={{ mb: 8 }}>
+                <Paper elevation={9} sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+                    <Typography component="h1" variant="h4">
                         Cadastro
                     </Typography>
                     <Box
                         sx={{
-                            marginTop: 8,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center'
                         }}
                     >
-                        <Box noValidate onSubmit={handleSubmit}>
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2 }}
+                            startIcon={<GoogleIcon fontSize="large"/>}
+                        >
+                            Cadastre-se com Google
+                        </Button>
+                        <Typography>ou</Typography>
+                        <Box noValidate onSubmit={handleSubmit} sx={{ mt: 2 }} >
                             <Grid container spacing={2}>
                                 <Grid item xs={16} sm={6}>
                                     <TextField
@@ -89,23 +98,33 @@ export const Cadastro = () => {
                                 <Grid item xs={12}>
                                     <FormControlLabel
                                         control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                        label="Este E-mail está correto."
+                                        label="Confirme o Email"
                                     />
                                 </Grid>
                             </Grid>
-                            <Button
-                                href='/pagina-inicial'
-                                fullWidth
-                                type="submit"
-                                variant="contained"
-                                sx={{ mt: 3, mb: 8 }}
-                            >
-                                Cadastre-se
-                            </Button>
+                            <Grid container justifyContent="center">
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    sx={{ mt: 2, mb: 3 }}
+                                >
+                                    Cadastre-se
+                                </Button>
+                            </Grid>
+                            <Grid container justifyContent="center">
+                                <Grid item>
+                                    <Typography>
+                                        Já tem login?
+                                        <Link href="/entrar" variant="body">
+                                            Fazer login
+                                        </Link>
+                                    </Typography>
+                                </Grid>
+                            </Grid>
                         </Box>
                     </Box>
-                </Box>
-            </Paper>
+                </Paper>
+            </Container>
         </ThemeProvider >
     );
 }
