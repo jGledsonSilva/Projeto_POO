@@ -18,6 +18,7 @@
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.40.0",
     "react-router-dom": "^6.4.3",
     "sort-by": "^0.0.2",
     "styled-components": "^5.3.6",
