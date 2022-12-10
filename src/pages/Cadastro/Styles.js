@@ -3,7 +3,7 @@ const background = {
     height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#141414',
+    backgroundColor: '#0f0f0f',
 }
 
 const paper = {
@@ -13,7 +13,7 @@ const paper = {
     flexDirection: 'column',
     justifyContent: 'center',
     padding: '8px 32px',
-    backgroundColor: '#3a3a3a',
+    backgroundColor: '#222222',
 }
 
 const h1 = {
