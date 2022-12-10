@@ -5,15 +5,19 @@ import { BaseLayout } from "../../shared/components/layouts/BaseLayout";
 export const Home = () => {
   const history = useNavigate();
 
-  const handleClick = () => {
+  const cadastrar = () => {
     history('/cadastrar')
+  }
+  const login = () => {
+    history('/login')
   }
 
   return (
     <BaseLayout>
       <div className="Home">
         <h1>Você está na página inicial</h1>
-        <Button onClick={handleClick}>Cadastra-se</Button>
+        <Button onClick={cadastrar}>Cadastra-se</Button>
+        <Button onClick={login}>Fazer login</Button>
       </div>
     </BaseLayout>
   )
