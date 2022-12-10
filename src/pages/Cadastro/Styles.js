@@ -1,17 +1,33 @@
-const teste = {
-    backgroundColor: "#141414",
-    height: "100vh",
+const background = {
+    display: 'flex',
+    height: '100vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#141414',
 }
 
-const pap = {
-    width: "750px",
-    height: "420px",
-    padding: 5,
-    backgroundColor: "#d9d9d9",
-    margin: 5
+const paper = {
+    height: '475px',
+    width: '750px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: '8px 32px',
+    backgroundColor: '#3a3a3a',
 }
 
-export const Styles = {
-    teste,
-    pap
+const h1 = {
+    //fontweight:bold,
+    color: '#ffffff'
+}
+
+const button = {
+    borderRadius: '100px'
+}
+
+export const Styles ={
+    background,
+    button,
+    paper,
+    h1,
 }
