@@ -1,13 +1,15 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { Cadastro, Home, Login } from "../pages"
 
-export const Router = () => {
+export const Routes = () => {
     return (
-        <Routes>
-            <Route path="/pagina-inicial" element={<Home />} />
-            <Route path="/entrar" element={<Login />} />
-            <Route path="/cadastrar" element={<Cadastro />} />
-            <Route path="*" element={<Navigate to="/pagina-inicial" />} />
-        </Routes>
+        <BrowserRouter>
+            <Switch>
+                <Route path="/pagina-inicial" element={<Home />} />
+                <Route path="/entrar" element={<Login />} />
+                <Route path="/cadastrar" element={<Cadastro />} />
+                <Route path="*" element={<Navigate to="/pagina-inicial"/>} />
+            </Switch>
+        </BrowserRouter>
     )
 }
