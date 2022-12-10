@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
-a {
+body {
   font-family: 'Lato', sans-serif;
+  background-color: #0f0f0f;
+}
+
+a {
+  text-decoration: none;
+  color: #4DCBD3;
+}
+
+a:hover{
+  color: #84D5DA;
+}
+
+a:active{
+  color: #ADE3E6;
 }
