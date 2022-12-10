@@ -9,7 +9,7 @@ export const Login = () => {
       <Box sx={Styles.conteiner}>
         <Paper elevation={10} sx={Styles.paper}>
           <Typography variant="h5" sx={Styles.h1}>
-            Voce estar na página de login
+            Você está na página de login
           </Typography>
           <Button variant="contained" size="large" href="pagina-inicial">Voltar para a página inicial</Button>
           <Button variant="contained" size="large" href="cadastrar">cadastra-se</Button>
