@@ -34,17 +34,5 @@ export const theme = createTheme({
       }
     }
 
-    // MuiButton: {
-
-    //   variants: [
-    //     {
-    //       props: { variant: 'dashed' },
-    //       style: {
-    //         textTransform: 'none',
-    //         border: `2px dashed ${blue[500]}`,
-    //       },
-    //     } ] 
-    // },
-
   }
   });
