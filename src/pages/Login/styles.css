@@ -1,10 +1,10 @@
-#login{
+#login {
     color: #FFFFFF;
     display: flex;
     flex-direction: row;
 }
 
-#login h1{
+#login h1 {
     width: 99px;
     height: 72px;
     font-style: normal;
@@ -14,11 +14,10 @@
     text-align: center;
     color: #FFFFFF;
     flex: none;
-    order: 0;
     flex-grow: 0;
 }
 
-#login h2{
+#login h2 {
     width: 223px;
     height: 48px;
     font-style: normal;
@@ -28,7 +27,6 @@
     text-align: left;
     color: #FFFFFF;
     flex: none;
-    order: 0;
     flex-grow: 0;
 }
 
@@ -44,58 +42,49 @@
     text-align: center;
     color: #FFFFFF;
     flex: none;
-    order: 1;
     flex-grow: 0;
 }
 
-#login #formularioLogin{
+#login #formularioLogin {
+    width: 450px;
+    height: 482px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px 32px;
     gap: 16px;
     position: absolute;
-    width: 450px;
-    height: 482px;
     left: calc(50% - 450px/2 + 475px);
     top: calc(50% - 482px/2);
     background: #1A1A1B;
-    border-radius: 10px;
 }
 
-.cadastro{
+.cadastro {
+    width: 386px;
+    height: 42px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
     gap: 10px;
-    width: 386px;
-    height: 42px;
-    
     flex: none;
-    order: 6;
     flex-grow: 0;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     text-align: right;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
-.sobre{
+.sobre {
+    width: 789px;
+    height: 556px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 14px;
     position: absolute;
-    width: 789px;
-    height: 556px;
     left: calc(50% - 789px/2 - 468.5px);
     top: calc(50% - 556px/2);
 }
