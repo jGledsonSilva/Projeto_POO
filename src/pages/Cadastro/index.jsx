@@ -14,15 +14,6 @@ import { Styles } from './styles';
 import Logo from '../../assets/Logo.svg'
 
 export const Cadastro = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
-    };
-
     return (
         <Box sx={Styles.background}>
             <Box sx={{ mt: 0, mb: '72px' }}>
@@ -58,7 +49,7 @@ export const Cadastro = () => {
                         </Button>
                     </Box>
                     <Typography color={'white'}>ou</Typography>
-                    <Box noValidate onSubmit={handleSubmit} sx={{ mt: 2 }} >
+                    <Box noValidate sx={{ mt: 2 }} >
                         <Grid container spacing={2}>
                             <Grid item xs={16} sm={6} >
                                 <TextField
