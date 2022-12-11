@@ -17,8 +17,6 @@ const box = {
 }
 
 const paper = {
-    height: '475px',
-    width: '725px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -27,8 +25,14 @@ const paper = {
     backgroundColor: '#222222',
 }
 
-const h1 = {
+const title = {
     fontWeight: "700",
+    color: '#ffffff'
+}
+
+
+const a = {
+    fontWeight: "500",
     color: '#ffffff'
 }
 
@@ -53,7 +57,8 @@ export const Styles ={
     logoTitle,
     background,
     button,
+    title,
     paper,
     box,
-    h1,
+    a,
 }
