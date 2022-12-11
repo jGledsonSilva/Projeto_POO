@@ -11,8 +11,8 @@ export const BaseLayout = ({ children }) => {
       <Box id="header" sx={styles.headerBackground}>
         <Box id="header-logo" sx={styles.bodySpacing}>
           <img src={Logo} width="24px"/>
-          <Typography sx={styles.logoTitle}>
-            <Typography sx={styles.titleColor}>Health</Typography>Pomo
+          <Typography component="span" sx={styles.logoTitle}>
+            <Typography component="span" sx={styles.titleColor}>Health</Typography>Pomo
           </Typography>
         </Box>
       </Box>
