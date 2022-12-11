@@ -41,7 +41,7 @@ export const Login = () => {
 
         <form id="formularioLogin" onSubmit={handleSubmit}>
           <h1>Login</h1>
-          <Button variant="contained" size="large" href="#">Entrar com o Google</Button>
+          <Button variant="contained" size="medium" href="#">Entrar com o Google</Button>
           <span>ou</span>
           <TextField
             id="outlined-name"
@@ -56,7 +56,7 @@ export const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button variant="contained" type='submit' size="large" href="pagina-inicial">Entrar</Button>
+          <Button variant="contained" type='submit' size="medium" href="pagina-inicial">Entrar</Button>
           <div className='cadastro'>
             <span>Não tem uma conta?</span>
             <a href="cadastrar">Cadastre-se</a>
