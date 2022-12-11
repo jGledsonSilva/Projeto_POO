@@ -11,6 +11,8 @@ import {
     Link,
 } from '@mui/material';
 import { Styles } from './styles';
+import Logo from '../../assets/Logo.svg'
+
 export const Cadastro = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -23,6 +25,16 @@ export const Cadastro = () => {
 
     return (
         <Box sx={Styles.background}>
+            <Box sx={{ mt: 0, mb: '72px' }}>
+                <Box id="header-logo" sx={Styles.box}>
+                    <Box>
+                        <img src={Logo} width="78px" />
+                    </Box>
+                    <Typography variant='h3' margin={1} sx={Styles.logoTitle}>
+                        <Typography variant='h3' sx={Styles.titleColor}>Health</Typography>Pomo
+                    </Typography>
+                </Box>
+            </Box>
             <Paper elevation={9} sx={Styles.paper}>
                 <Typography component="h1" variant="h4" sx={Styles.h1}>
                     Cadastro
@@ -34,93 +46,97 @@ export const Cadastro = () => {
                         alignItems: 'center'
                     }}
                 >
-                    <Button
-                        type="submit"
-                        variant="contained"
-                        color={'secondary'}
-                        sx={{ mt: 3, mb: 2 }}
-                        startIcon={<GoogleIcon fontSize="large" />}
-                    >
-                        Cadastre-se com Google
-                    </Button>
+                    <Box sx={{ mt: 5, mb: 2 }}>
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            color={'secondary'}
+                            sx={Styles.button}
+                            startIcon={<GoogleIcon fontSize="large" />}
+                        >
+                            Cadastre-se com Google
+                        </Button>
+                    </Box>
                     <Typography color={'white'}>ou</Typography>
                     <Box noValidate onSubmit={handleSubmit} sx={{ mt: 2 }} >
                         <Grid container spacing={2}>
                             <Grid item xs={16} sm={6} >
                                 <TextField
+                                    size="small"
                                     autoComplete="given-name"
                                     name="firstName"
                                     required
                                     fullWidth
                                     id="firstName"
-                                    label="User"
+                                    placeholder="User"
                                     autoFocus
-                                  
+
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <TextField
+                                    size="small"
                                     password
                                     required
                                     fullWidth
                                     id="Senha"
                                     type="password"
-                                    label="Senha"
+                                    placeholder="Senha"
                                     name="Senha"
                                     autoComplete="new-Senha"
 
-                                    
+
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <TextField
+                                    size="small"
                                     required
                                     fullWidth
                                     id="email"
-                                    label="Email"
+                                    placeholder="Email"
                                     name="email"
                                     autoComplete="email"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <TextField
+                                    size="small"
                                     password
                                     required
                                     fullWidth
                                     name="Confirme a Senha"
-                                    label="Confirme a Senha"
+                                    placeholder="Confirme a Senha"
                                     type="password"
                                     id="Confirme a Senha"
-                                 
+
                                 />
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControlLabel
-                                    control={<Checkbox value="allowExtraEmails" color="secondary" />}
+                                    sx={Styles.h1}
+                                    control={<Checkbox value="allowExtraEmails" color="primary" />}
                                     label="Confirme o Email"
                                 />
                             </Grid>
                         </Grid>
                         <Grid container justifyContent="center">
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                sx={{ mt: 2, mb: 3 }}
-                                color = {'primary'}
-                            >
-                                Cadastre-se
-                            </Button>
+                            <Box sx={{ mt: 2, mb: 3 }}>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    sx={Styles.button}
+                                    color={'primary'}
+                                >
+                                    Cadastre-se
+                                </Button>
+                            </Box>
                         </Grid>
                         <Grid container justifyContent="center">
                             <Grid item>
                                 <Typography color="white" sx={{
-                                    'a':{
+                                    'a': {
                                         color: '#4DCBD3',
-                                        backgroundColor: '#1A1A1B',
-                                        padding: '0.4rem',
-                                        borderRadius: '1rem',
-                                        underline: 'none',
-                                        textDecoration:'none',
                                     }
                                 }}>
                                     Já tem login?
