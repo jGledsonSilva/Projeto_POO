@@ -1,5 +1,6 @@
 import { red } from '@mui/material/colors';
 import {createTheme } from '@mui/material/styles';
+import { height } from '@mui/system';
 
 export const theme = createTheme({
 
@@ -22,17 +23,29 @@ export const theme = createTheme({
       MuiTextField: {
         styleOverrides: {
           root: {
-            background:'#4A4A4A'
-            
+            background:'#4A4A4A',
+            borderRadius: '10px'
           },
+      },
+      palette: {
+        contrastText: '#fff',
       }
     },
 
     MuiFormControlLabel: {
       label: {
-        fontSize: '2rem'
+        fontSize: '2rem',
+        fontWeight: "700",
       }
-    }
+    },
+
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: '#fff',
+        },
+      }
+    },
 
     // MuiButton: {
 
