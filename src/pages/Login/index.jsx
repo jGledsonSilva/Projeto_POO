@@ -103,7 +103,7 @@ export const Login = () => {
                       required
                       fullWidth
                       id="email"
-                      label="Usuário ou email"
+                      label="Email"
                       name="email"
                       type="email"
                       autoComplete="email"
