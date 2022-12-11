@@ -2,6 +2,7 @@ const buttonsBox = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  marginBottom:  "1.5rem",
   gap: '2rem'
 }
 

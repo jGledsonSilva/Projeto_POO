@@ -7,7 +7,7 @@ const navBox = {
   height: '54px',
   marginInline: 'auto',
   width: 'fit-content',
-  borderRadius: "2rem"
+  borderRadius: '2rem'
 }
 
 const navItems = {

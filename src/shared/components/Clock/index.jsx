@@ -7,7 +7,8 @@ export const Clock = () => {
 
   const {
     seconds,
-    minutes
+    minutes,
+    isRestTime
   } = useContext(CountDownContext);
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
@@ -15,7 +16,7 @@ export const Clock = () => {
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
   return (
-    <Box sx={styles.borderBox}>
+    <Box sx={isRestTime ? styles.restBox : styles.focusBox}>
       <p>{minuteLeft}{minuteRight}:{secondLeft}{secondRight}</p>
     </Box>
   )
