@@ -15,8 +15,13 @@ import { Styles } from './styles';
 import Logo from '../../assets/Logo.svg'
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup'
+import { userServide } from '../../shared/service/api/user';
+import { useNavigate } from 'react-router-dom';
 
 export const Cadastro = () => {
+
+    const navigate = useNavigate();
+
     const paperstyle = {
         width: '725px',
     }
@@ -39,13 +44,25 @@ export const Cadastro = () => {
         confirmemailbox: Yup.string().oneOf(['true'], 'Confirme o seu Email')
     })
 
-    const onSubmit = (values, props) => {
-        console.log(values)
-        console.log(props)
-        settimeout(() => {
+    const onSubmit = async (values, props) => {
+
+
+        console.log(values.password)
+
+        try {
+            const response = await userServide.postUser(values.email, values.nome, values.senha)
             props.resetForm()
             props.setSubmitting(false)
-        }, 2000)
+
+            console.log("fiz a requisição")
+
+
+            console.log(response)
+
+        } catch(error) {
+            console.log(error)
+        }
+
     }
     return (
         <Box sx={Styles.background}>
