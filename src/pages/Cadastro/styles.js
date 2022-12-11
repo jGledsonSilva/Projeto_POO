@@ -14,7 +14,11 @@ const paper = {
     justifyContent: 'center',
     padding: '8px 32px',
     backgroundColor: '#222222',
+    alignItems: 'center'
 }
+
+
+
 
 const h1 = {
     //fontweight:bold,

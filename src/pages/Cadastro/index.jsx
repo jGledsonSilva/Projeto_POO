@@ -7,9 +7,7 @@ import {
     Grid,
     Box,
     Typography,
-    Container,
     Paper,
-    CssBaseline,
     Link,
 } from '@mui/material';
 import { Styles } from './styles';
@@ -39,15 +37,16 @@ export const Cadastro = () => {
                     <Button
                         type="submit"
                         variant="contained"
+                        color={'secondary'}
                         sx={{ mt: 3, mb: 2 }}
                         startIcon={<GoogleIcon fontSize="large" />}
                     >
                         Cadastre-se com Google
                     </Button>
-                    <Typography>ou</Typography>
+                    <Typography color={'white'}>ou</Typography>
                     <Box noValidate onSubmit={handleSubmit} sx={{ mt: 2 }} >
                         <Grid container spacing={2}>
-                            <Grid item xs={16} sm={6}>
+                            <Grid item xs={16} sm={6} >
                                 <TextField
                                     autoComplete="given-name"
                                     name="firstName"
@@ -56,6 +55,7 @@ export const Cadastro = () => {
                                     id="firstName"
                                     label="User"
                                     autoFocus
+                                  
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -68,6 +68,8 @@ export const Cadastro = () => {
                                     label="Senha"
                                     name="Senha"
                                     autoComplete="new-Senha"
+
+                                    
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -89,11 +91,12 @@ export const Cadastro = () => {
                                     label="Confirme a Senha"
                                     type="password"
                                     id="Confirme a Senha"
+                                 
                                 />
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControlLabel
-                                    control={<Checkbox value="allowExtraEmails" color="primary" />}
+                                    control={<Checkbox value="allowExtraEmails" color="secondary" />}
                                     label="Confirme o Email"
                                 />
                             </Grid>
@@ -103,13 +106,23 @@ export const Cadastro = () => {
                                 type="submit"
                                 variant="contained"
                                 sx={{ mt: 2, mb: 3 }}
+                                color = {'primary'}
                             >
                                 Cadastre-se
                             </Button>
                         </Grid>
                         <Grid container justifyContent="center">
                             <Grid item>
-                                <Typography>
+                                <Typography color="white" sx={{
+                                    'a':{
+                                        color: '#4DCBD3',
+                                        backgroundColor: '#1A1A1B',
+                                        padding: '0.4rem',
+                                        borderRadius: '1rem',
+                                        underline: 'none',
+                                        textDecoration:'none',
+                                    }
+                                }}>
                                     Já tem login?
                                     <Link href="/entrar" variant="body">
                                         Fazer login
