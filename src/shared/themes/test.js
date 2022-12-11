@@ -24,12 +24,9 @@ export const theme = createTheme({
         styleOverrides: {
           root: {
             background:'#4A4A4A',
-            borderRadius: '10px'
+            borderRadius: '4px'
           },
       },
-      palette: {
-        contrastText: '#fff',
-      }
     },
 
     MuiFormControlLabel: {
