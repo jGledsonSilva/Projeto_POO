@@ -1,8 +1,11 @@
 import { AppRoutes } from "./routes";
+import { CountDownProvider } from "./shared/contexts/CountDown";
 
 export const App = () => {
   return (
-    <AppRoutes />
+    <CountDownProvider>
+      <AppRoutes />
+    </CountDownProvider>
   );
 }
 
