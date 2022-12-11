@@ -1,83 +1,143 @@
+import GoogleIcon from '@mui/icons-material/Google';
 import {
   Button,
-  Checkbox,
   TextField,
-  FormControlLabel,
-  Grid,
   Box,
   Typography,
   Paper,
-  Link,
+  FormHelperText,
 } from '@mui/material';
-import { BaseLayout } from "../../shared/components/layouts/BaseLayout";
-import React, { useState, useContext } from "react";
-import { AuthContext } from '../../contexts/auth';
 import './styles.css';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import * as Yup from 'yup'
+
+import { BaseLayout } from "../../shared/components/layouts/BaseLayout";
 
 export const Login = () => {
-  const { authenticated, login } = useContext(AuthContext);
+  const initialValues = {
+    email: '',
+    password: '',
+  }
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().email('Email não válido').required('Campo Obrigatório'),
+    senha: Yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.,])[A-Za-z\d@$!%*#?&.,]{8,}$/,
+      'No mínimo 8 caracteres, ' +
+      'uma letra maiúscula e minúscula, ' +
+      'um número e um caracter especial'
+    ).required('Campo Obrigatório')
+  })
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("submit", authenticated, { email, password });
-
-    login(email, password)
-  };
+  const onSubmit = (values, props) => {
+    console.log("submit")
+    console.log(values)
+    console.log(props)
+    settimeout(() => {
+      props.resetForm()
+      props.setSubmitting(false)
+    }, 2000)
+  }
 
   return (
     <BaseLayout>
 
-      <div id='login'>
+      <Box id='login'>
+        <Box className='sobre'>
+          <Box>
+            <Typography component="h2">
+              HealthPomo
+            </Typography>
+            <Typography component="p">
+              É uma aplicação web que tem como objetivo auxiliar o usuário a gerenciar seu tempo de trabalho e seus exercícios físicos usando a técnica pomodoro, de forma que ele possa ter uma melhor qualidade de vida.
+            </Typography>
+          </Box>
 
-        <div className='sobre'>
-          <div>
-            <h2>HealthPomo</h2>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-          </div>
+          <Box>
+            <Typography component="h2">
+              Pomodoro
+            </Typography>
+            <Typography component="p">
+              O pomodoro é uma técnica de gestão do tempo que consiste em trabalhar em blocos de tempo de 25 minutos, seguidos de descansos curtos.
+            </Typography>
+          </Box>
 
-          <div>
-            <h2>Pomodoro</h2>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-          </div>
+          <Box>
+            <Typography component="h2">
+              Sobre
+            </Typography>
+            <Typography component="p">
+              Projeto Final da disciplina Programação Orientada a Objetos do 3º semestre do curso ciências da computação do IFCE Maracanaú.
+            </Typography>
+          </Box>
+        </Box>
+        <Paper elevation={9} id='formularioLogin'>
+          <Typography component="h1">
+            Login
+          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
+            <Box sx={{ mt: 5, mb: 2 }}>
+              <Button
+                type="submit"
+                variant="contained"
+                color={'secondary'}
+                sx={{ borderRadius: '100px' }}
+                startIcon={<GoogleIcon fontSize="large" />}
+              >
+                Entrar com Google
+              </Button>
+            </Box>
+            <Typography color={'white'}>ou</Typography>
 
-          <div>
-            <h2>Sobre</h2>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-          </div>
-        </div>
+            <Box noValidate sx={{ mt: 2 }} >
+              <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+                {(props) => (
+                  <Form>
 
-        <form id="formularioLogin" onSubmit={handleSubmit}>
-          <h1>Login</h1>
-          <Button variant="contained" size="medium" href="#">Entrar com o Google</Button>
-          <span>ou</span>
-          <TextField
-            required
-            fullWidth 
-            id="outlined-required"
-            label="Usuário ou email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <TextField
-            required
-            fullWidth 
-            id="outlined-required"
-            label="Senha"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <Button variant="contained" type='submit' size="medium" href="pagina-inicial">Entrar</Button>
-          <div className='cadastro'>
-            <span>Não tem uma conta?</span>
-            <a href="cadastrar">Cadastre-se</a>
-          </div>
-        </form>
-      </div>
-    </BaseLayout>
+                    <Field
+                      required
+                      fullWidth
+                      id="email"
+                      label="Usuário ou email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      as={TextField}
+                    />
+                    <ErrorMessage name="email" component={FormHelperText} />
+
+                    <Field
+                      required
+                      fullWidth
+                      id="password"
+                      label="Senha"
+                      name="password"
+                      type="password"
+                      as={TextField}
+                    />
+                    <ErrorMessage name="password" component={FormHelperText} />
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <Button variant="contained" type='submit' size="medium" href="pagina-inicial" sx={{
+                        alignSelf: 'center'
+                      }}>Entrar</Button>
+                    </Box>
+                    <Box className='cadastro'>
+                      <span>Não tem uma conta?</span>
+                      <a href="cadastrar">Cadastre-se</a>
+                    </Box>
+                  </Form>
+                )}
+              </Formik>
+            </Box>
+          </Box>
+        </Paper>
+      </Box >
+    </BaseLayout >
   )
 }
 
