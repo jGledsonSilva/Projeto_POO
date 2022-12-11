@@ -15,7 +15,7 @@ const logoTitle = {
 }
 
 const bodyBackground = {
-  backgroundColor: '#141414',
+  backgroundColor: '#0f0f0f',
   height: '100vh'
 }
 
