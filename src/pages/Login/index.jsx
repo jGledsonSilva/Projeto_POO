@@ -114,13 +114,13 @@ export const Login = () => {
                     <Field
                       required
                       fullWidth
-                      id="password"
+                      id="senha"
                       label="Senha"
-                      name="password"
-                      type="password"
+                      name="senha"
+                      type="senha"
                       as={TextField}
                     />
-                    <ErrorMessage name="password" component={FormHelperText} />
+                    <ErrorMessage name="senha" component={FormHelperText} />
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Button variant="contained" type='submit' size="medium" href="pagina-inicial" sx={{
                         alignSelf: 'center'
