@@ -1,11 +1,22 @@
 import { TextField, Button } from '@mui/material';
 import { BaseLayout } from "../../shared/components/layouts/BaseLayout";
+import React, {useState, useContext} from "react";
+import { AuthContext } from '../../contexts/auth';
 import './styles.css';
 
-let nome;
-let senha;
-
 export const Login = () => {
+  const { authenticated, login } = useContext (AuthContext);
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit", authenticated, { email, password});
+  
+    login(email, password)
+  };
+
   return (
     <BaseLayout>
 
@@ -28,29 +39,31 @@ export const Login = () => {
           </div>
         </div>
 
-        <div id="formularioLogin">
+        <form id="formularioLogin" onSubmit={handleSubmit}>
           <h1>Login</h1>
           <Button variant="contained" size="large" href="#">Entrar com o Google</Button>
           <span>ou</span>
           <TextField
             id="outlined-name"
             label="Usuário ou email"
-            value={nome}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
             id="outlined-name"
             label="Senha"
-            value={senha}
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <Button variant="contained" size="large" href="pagina-inicial">Entrar</Button>
+          <Button variant="contained" type='submit' size="large" href="pagina-inicial">Entrar</Button>
           <div className='cadastro'>
             <span>Não tem uma conta?</span>
             <a href="cadastrar">Cadastre-se</a>
           </div>
-        </div>
+        </form>
       </div>
     </BaseLayout>
-    
   )
 }
 
