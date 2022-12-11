@@ -28,8 +28,8 @@ export const Cadastro = () => {
         confirmemailbox: false
     }
     const validationSchema = Yup.object().shape({
-        nome: Yup.string().required('Campo Obrigatório'),
-        email: Yup.string().required('Campo Obrigatório'),
+        nome: Yup.string().min(3,'O nome precisa ter pelo menos três caracteres').required('Campo Obrigatório'),
+        email: Yup.string().email('Email não válido').required('Campo Obrigatório'),
         senha: Yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.,])[A-Za-z\d@$!%*#?&.,]{8,}$/,
             'No mínimo 8 caracteres, ' +
             'uma letra maiúscula e minúscula, ' +
