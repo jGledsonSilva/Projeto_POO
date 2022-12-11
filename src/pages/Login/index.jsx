@@ -1,19 +1,29 @@
-import { TextField, Button } from '@mui/material';
+import {
+  Button,
+  Checkbox,
+  TextField,
+  FormControlLabel,
+  Grid,
+  Box,
+  Typography,
+  Paper,
+  Link,
+} from '@mui/material';
 import { BaseLayout } from "../../shared/components/layouts/BaseLayout";
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import { AuthContext } from '../../contexts/auth';
 import './styles.css';
 
 export const Login = () => {
-  const { authenticated, login } = useContext (AuthContext);
-  
+  const { authenticated, login } = useContext(AuthContext);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit", authenticated, { email, password});
-  
+    console.log("submit", authenticated, { email, password });
+
     login(email, password)
   };
 
@@ -44,13 +54,17 @@ export const Login = () => {
           <Button variant="contained" size="medium" href="#">Entrar com o Google</Button>
           <span>ou</span>
           <TextField
-            id="outlined-name"
+            required
+            fullWidth 
+            id="outlined-required"
             label="Usuário ou email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
-            id="outlined-name"
+            required
+            fullWidth 
+            id="outlined-required"
             label="Senha"
             type="password"
             value={password}
