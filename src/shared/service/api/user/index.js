@@ -5,22 +5,22 @@ const postUser = async (email, nickname, password) => {
 
     try {
 
+        const id = null
         const body = {
+            id:id,
             email: email,
             password: password,
             login: nickname
         }
 
-
-        console.log(body)
-
         const { data } = await Api.post("/save", body)
+
+        console.log(data)
 
         return data
     } catch(error) {
-        console.log(error)
-
-        throw ("algo deu errado")
+        
+        throw (error.response.data)
     }
 }
 
