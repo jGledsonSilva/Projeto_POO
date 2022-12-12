@@ -3,6 +3,7 @@ const background = {
     height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#0f0f0f',
 }
 
 const conteiner = {

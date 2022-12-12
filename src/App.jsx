@@ -1,9 +1,15 @@
-import { AppRoutes } from "./routes";
+import { CountDownProvider } from "./shared/contexts/CountDown";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./shared/themes/test";
 
 export const App = () => {
   return (
-    <AppRoutes />
+    <ThemeProvider theme={theme}>
+      <CountDownProvider>
+        <AppRoutes />
+      </CountDownProvider>
+    </ThemeProvider>
   );
-}
+};
 
-export default App
+export default App;
