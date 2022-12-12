@@ -175,7 +175,7 @@ export const Cadastro = () => {
                                     }
                                 }}>
                                     Já tem login?
-                                    <Link href="/entrar" variant="body">
+                                    <Link href="/login" variant="body">
                                         Fazer login
                                     </Link>
                                 </Typography>
