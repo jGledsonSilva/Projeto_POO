@@ -1,5 +1,14 @@
 const headerBackground = {
-  backgroundColor: "#1A1A1B"
+  backgroundColor: "#1A1A1B",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "0px 20px",
+  gap: "32px",
+  position: "absolute",
+  height: "56px",
+  width: "100%",
 }
 
 const titleColor = {
