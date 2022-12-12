@@ -32,13 +32,7 @@ export const BaseLayout = ({ children }) => {
   const login = () => {
     navigate('/entrar')
   }
-  const home = () => {
-    navigate('/pagina-inicial')
-  }
-
-  const login = () => {
-    navigate('/login')
-  }
+  
   const home = () => {
     navigate('/pagina-inicial')
   }
