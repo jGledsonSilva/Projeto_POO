@@ -15,6 +15,7 @@ export const AppRoutes = () => {
                     <Route path="/login" element={<Login />} />
                     <Route path="/cadastrar" element={<Cadastro />} />
                     <Route path="*" element={<Navigate to="/pagina-inicial"/>} />
+                <Route path="/pomodoro" element={<Pomodoro />} />
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
