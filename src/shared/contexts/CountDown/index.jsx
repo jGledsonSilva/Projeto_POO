@@ -36,14 +36,16 @@ export const CountDownProvider = ({children}) => {
     time > 0 ? setTime(time - 10) : alert("Não é mais possível adiar o tempo");
   }
 
-  const pomoTime = () => {
-    setIsRestTime(false);
-    setTime(standardTime);
-  }
-  
+
   const pauseCountDown = () => {
     clearTimeout(countdownTimeout);
     setIsActive(false);
+  }
+  
+  const pomoTime = () => {
+    setIsRestTime(false);
+    setTime(standardTime);
+    pauseCountDown();
   }
 
   const standardRestTime = () => {
