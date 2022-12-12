@@ -2,6 +2,13 @@
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  top: calc(50% - 500px/2);
+  position: absolute;
+  padding: 32px;
+
 }
 
 #login h1 {
@@ -57,9 +64,6 @@
   align-items: center;
   padding: 8px 32px;
   gap: 16px;
-  position: absolute;
-  left: calc(50% - 450px/2 + 475px);
-  top: calc(50% - 482px/2);
   background: #1A1A1B;
 }
 
@@ -97,7 +101,4 @@ form {
   align-items: flex-start;
   padding: 0px;
   gap: 14px;
-  position: absolute;
-  left: calc(50% - 789px/2 - 468.5px);
-  top: calc(50% - 556px/2);
 }
