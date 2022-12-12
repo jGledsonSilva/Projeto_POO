@@ -3,8 +3,6 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "./shared/themes/test";
 import { AppRoutes } from "./routes/index";
 
-import { AppRoutes } from "./routes/index"
-
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
