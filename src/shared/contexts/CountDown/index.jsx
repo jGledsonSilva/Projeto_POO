@@ -7,8 +7,9 @@ export const CountDownProvider = ({children}) => {
 
   let countdownTimeout;
 
-  const initialTime = 25 * 60;
+  const standardTime = 25 * 60;
 
+  const [initialTime, setInitialTime] = useState(standardTime);
   const [time, setTime] = useState(initialTime);
   const [isActive, setIsActive] = useState(false);
   const [isRestTime, setIsRestTime] = useState(false);
@@ -22,7 +23,6 @@ export const CountDownProvider = ({children}) => {
   }
 
   const resetCountDown = () => {
-    setIsRestTime(false)
     clearTimeout(countdownTimeout);
     setHasFinished(false);
     setIsActive(false);
@@ -31,11 +31,12 @@ export const CountDownProvider = ({children}) => {
 
   const skipTenSeconds = () => {
     clearTimeout(countdownTimeout);
-    setTime(time - 10);
+    time > 0 ? setTime(time - 10) : alert("Não é mais possível adiar o tempo");
   }
 
-  const pomoTime = (time) => {
-    setTime(time);
+  const pomoTime = () => {
+    setIsRestTime(false);
+    setTime(standardTime);
   }
   
   const pauseCountDown = () => {
@@ -46,21 +47,26 @@ export const CountDownProvider = ({children}) => {
   const standardRestTime = () => {
     pauseCountDown();
     setIsRestTime(true);
-    setTime(15 * 1);
+    setInitialTime(15 * 60);
+    setTime(initialTime);
   }
 
   const shortRestTime = () => {
     clearTimeout(countdownTimeout);
     pauseCountDown();
     setIsRestTime(true);
-    setTime(5 * 60);
+    setInitialTime(5 * 60);
+    console.log(initialTime)
+    setTime(initialTime);
   }
 
   const longRestTime = () => {
+    setInitialTime(25 * 60);
     clearTimeout(countdownTimeout);
     pauseCountDown();
+    console.log(initialTime)
+    setTime(initialTime);
     setIsRestTime(true);
-    setTime(25 * 60);
   }
 
   useEffect(() => {

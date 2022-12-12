@@ -7,7 +7,7 @@ const taskBox = {
   borderRadius: '10px',
   marginInline: 'auto',
   p: {
-    color: "#ffffff"
+    color: '#ffffff'
   },
   gap: '0.5rem'
 }
@@ -17,6 +17,13 @@ const stageTaskBox = {
   justifyContent: 'center',
   alignItems: 'end',
   gap: '0.5rem'
+}
+
+const taskWrapper = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: "center",
+  flexFlow: 'column wrap'
 }
 
 const taskName = {
@@ -30,6 +37,7 @@ const taskNumber = {
 
 export const styles = {
   stageTaskBox,
+  taskWrapper,
   taskNumber,
   taskName,
   taskBox

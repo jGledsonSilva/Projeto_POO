@@ -11,7 +11,7 @@ export const Pomodoro = () => {
       <PomodoroNavigation />
       <Clock/>
       <TimeAction />
-      <Task task="Tarefa" stage="0"/>
+      <Task task="Tarefa"/>
     </BaseLayout>
   )
 }

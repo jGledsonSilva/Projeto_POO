@@ -1,5 +1,5 @@
 import { styles } from "./styles";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useContext } from "react";
 import { CountDownContext } from "../../contexts/CountDown";
 
@@ -17,7 +17,7 @@ export const Clock = () => {
 
   return (
     <Box sx={isRestTime ? styles.restBox : styles.focusBox}>
-      <p>{minuteLeft}{minuteRight}:{secondLeft}{secondRight}</p>
+      <Typography sx={styles.typography}>{minuteLeft}{minuteRight}:{secondLeft}{secondRight}</Typography>
     </Box>
   )
 }

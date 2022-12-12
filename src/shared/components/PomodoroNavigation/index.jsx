@@ -11,12 +11,13 @@ export const PomodoroNavigation = () => {
   const {
     shortRestTime,
     longRestTime,
-    resetCountDown
+    resetCountDown,
+    pomoTime
   } = useContext(CountDownContext);
 
   return (
     <Box sx={styles.navBox}>
-      <Button sx={styles.navItems} onClick={resetCountDown}>
+      <Button sx={styles.navItems} onClick={pomoTime}>
         <img src={Pomodoro} />
         <Typography fontSize="14px">Pomodoro</Typography>
       </Button>

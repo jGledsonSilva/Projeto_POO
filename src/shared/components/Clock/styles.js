@@ -6,12 +6,14 @@ const borderBox = {
   width: '18.75rem',
   height: '18.75rem',
   marginBlock: "22px",
-  p: {
-    fontSize: '6.25rem',
-    fontWeight: '700',
-    color: "#ffffff"
-  },
   marginInline: "auto"
+}
+
+const typography = {
+  fontSize: '6.25rem',
+  fontWeight: '700',
+  color: "#ffffff",
+  fontFamily: "Roboto Flex"
 }
 
 const focusBox = {
@@ -26,5 +28,6 @@ const restBox = {
 
 export const styles = {
   focusBox,
-  restBox
+  restBox,
+  typography
 }

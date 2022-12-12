@@ -5,13 +5,15 @@ const headerBackground = {
 const titleColor = {
   fontSize: '0.875rem',
   display: 'inline',
-  color: '#4DCBD3'
+  color: '#4DCBD3',
+  fontFamily: 'Lato'
 }
 
 const logoTitle = {
   fontSize: '0.875rem',
   fontWeight: '500',
-  color: '#ffffff'
+  color: '#ffffff',
+  fontFamily: 'Lato'
 }
 
 const bodyBackground = {
