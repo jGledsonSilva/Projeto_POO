@@ -11,7 +11,6 @@ export const PomodoroNavigation = () => {
   const {
     shortRestTime,
     longRestTime,
-    resetCountDown,
     pomoTime
   } = useContext(CountDownContext);
 

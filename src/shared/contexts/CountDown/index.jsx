@@ -8,6 +8,8 @@ export const CountDownProvider = ({children}) => {
   let countdownTimeout;
 
   const standardTime = 25 * 60;
+  const shortBreak = 5 * 60;
+  const longBreak = 25 * 60;
 
   const [initialTime, setInitialTime] = useState(standardTime);
   const [time, setTime] = useState(initialTime);
@@ -47,26 +49,22 @@ export const CountDownProvider = ({children}) => {
   const standardRestTime = () => {
     pauseCountDown();
     setIsRestTime(true);
-    setInitialTime(15 * 60);
-    setTime(initialTime);
+    setInitialTime(longBreak);
+    setTime(longBreak);
   }
 
   const shortRestTime = () => {
-    clearTimeout(countdownTimeout);
-    pauseCountDown();
     setIsRestTime(true);
-    setInitialTime(5 * 60);
-    console.log(initialTime)
-    setTime(initialTime);
+    setInitialTime(shortBreak);
+    pauseCountDown();
+    setTime(shortBreak);
   }
 
   const longRestTime = () => {
-    setInitialTime(25 * 60);
-    clearTimeout(countdownTimeout);
-    pauseCountDown();
-    console.log(initialTime)
-    setTime(initialTime);
+    setInitialTime(longBreak);
     setIsRestTime(true);
+    pauseCountDown();
+    setTime(longBreak);
   }
 
   useEffect(() => {
