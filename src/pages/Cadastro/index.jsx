@@ -46,21 +46,15 @@ export const Cadastro = () => {
 
     const onSubmit = async (values, props) => {
 
-
-        console.log(values.password)
-
         try {
             const response = await userServide.postUser(values.email, values.nome, values.senha)
             props.resetForm()
             props.setSubmitting(false)
-
-            console.log("fiz a requisição")
-
-
-            console.log(response)
+            alert("Cadastrado com sucesso")
+            navigate('/entrar')
 
         } catch(error) {
-            console.log(error)
+            alert(error)
         }
 
     }
