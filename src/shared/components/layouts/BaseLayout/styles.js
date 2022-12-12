@@ -1,5 +1,5 @@
 const headerBackground = {
-  backgroundColor: '#1A1A1B',
+  backgroundColor: "#1A1A1B",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -24,8 +24,8 @@ const logoTitle = {
 }
 
 const bodyBackground = {
-  backgroundColor: '#0f0f0f',
-  height: '100vh'
+  backgroundColor: "#0f0f0f",
+  height: "90vh"
 }
 
 const bodySpacing = {

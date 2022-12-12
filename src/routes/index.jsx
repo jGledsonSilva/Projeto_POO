@@ -1,7 +1,12 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
-import { Cadastro, Home, Login, Pomodoro } from "../pages"
+import { Cadastro, Home, Login } from "../pages"
+import { AuthProvider, AuthContext } from "../contexts/auth";
 
-export const AppRoutes  = () => {
+export const AppRoutes = () => {
+    const Private = ({ children }) => {
+        const { authenticated } = useContext(AuthContext);
+        return authenticated ? children : <Navigate to="/login" />;
+    };
     return (
         <BrowserRouter>
             <AuthProvider>
