@@ -51,7 +51,7 @@ export const Cadastro = () => {
             props.resetForm()
             props.setSubmitting(false)
             alert("Cadastrado com sucesso")
-            navigate('/entrar')
+            navigate('/login')
 
         } catch(error) {
             alert(error)
