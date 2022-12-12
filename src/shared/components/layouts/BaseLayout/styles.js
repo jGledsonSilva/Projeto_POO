@@ -6,7 +6,6 @@ const headerBackground = {
   alignItems: "center",
   padding: "0px 20px",
   gap: "32px",
-  position: "absolute",
   height: "56px",
   width: "100%",
 }
@@ -27,7 +26,7 @@ const logoTitle = {
 
 const bodyBackground = {
   backgroundColor: "#0f0f0f",
-  height: "90vh"
+  height: "100vh"
 }
 
 const bodySpacing = {
@@ -42,7 +41,6 @@ const bodySpacing = {
 const spotify = {
   position: "absolute",
   left: "55px",
-  bottom: "-293.01px"
 }
 
 export const styles = {

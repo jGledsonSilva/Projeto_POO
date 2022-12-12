@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import { Cadastro, Home, Login } from "../pages"
 import { AuthProvider, AuthContext } from "../contexts/auth";
+import { Pomodoro } from "../pages";
 
 export const AppRoutes = () => {
     const Private = ({ children }) => {
