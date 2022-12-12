@@ -24,8 +24,8 @@ const logoTitle = {
 }
 
 const bodyBackground = {
-  backgroundColor: '#0f0f0f',
-  height: '100vh'
+  backgroundColor: "#0f0f0f",
+  height: "90vh"
 }
 
 const bodySpacing = {
@@ -37,10 +37,19 @@ const bodySpacing = {
   padding: '5px 20px'
 }
 
+const spotify = {
+  position: "absolute",
+  left: "55px",
+  bottom: "-293.01px"
+}
+
 export const styles = {
   headerBackground,
   titleColor,
   logoTitle,
   bodyBackground,
-  bodySpacing
+  bodySpacing,
+  spotify
 }
+
+
