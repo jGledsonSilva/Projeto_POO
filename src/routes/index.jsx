@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import { Cadastro, Home, Login } from "../pages"
 
-export const AppRoutes = () => {
+export const AppRoutes  = () => {
     return (
         <BrowserRouter>
             <Routes>
