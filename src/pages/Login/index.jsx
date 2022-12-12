@@ -11,8 +11,6 @@ import './styles.css';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup'
 
-import { BaseLayout } from "../../shared/components/layouts/BaseLayout";
-
 export const Login = () => {
   const initialValues = {
     email: '',
