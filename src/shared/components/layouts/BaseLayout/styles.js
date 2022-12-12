@@ -28,10 +28,19 @@ const bodySpacing = {
   padding: '5px 20px'
 }
 
+const spotify = {
+  position: "absolute",
+  left: "55px",
+  bottom: "-293.01px"
+}
+
 export const styles = {
   headerBackground,
   titleColor,
   logoTitle,
   bodyBackground,
-  bodySpacing
+  bodySpacing,
+  spotify
 }
+
+
